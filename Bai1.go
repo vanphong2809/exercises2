@@ -12,7 +12,7 @@ func Bai1() {
 	fmt.Println("Bai 1 cach 1")
 	for i := 0; i < 3; i++ {
 		time.Sleep(3 * time.Second)
-		fmt.Println("time now: {milliseconds}")
+		fmt.Println("time now: ", time.Now().UnixNano()/int64(time.Millisecond))
 	}
 	fmt.Println("kết thúc")
 }
@@ -31,14 +31,14 @@ func Bai1C2() {
 				return
 			case t := <-ticker.C:
 				{
-					fmt.Println("time now: ",t)
+					fmt.Println("time now: ", t)
 				}
 			}
 		}
 	}()
-	time.Sleep(9100*time.Millisecond)
+	time.Sleep(9100 * time.Millisecond)
 	ticker.Stop()
 	fmt.Println("test")
-	myChannel<-true
+	myChannel <- true
 	fmt.Println("Kết thúc")
 }

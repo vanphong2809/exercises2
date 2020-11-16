@@ -34,4 +34,5 @@ func Bai2() {
 	fmt.Println("Bai2")
 	timestamp := ((time.Now().Year()-1970)*365+tinhsonamnhuan()+time.Now().YearDay()-1)*60*60*24*1000 + (time.Now().Hour()-7)*60*60*1000 + time.Now().Minute()*60*1000 + time.Now().Second()*1000
 	fmt.Println(timestamp)
+	fmt.Println("so ngay: ", time.Now().Unix()/3600/24)
 }
